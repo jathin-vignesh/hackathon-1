@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-page">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <div id="mainPage" class="main-page">
+        <header>
+            <h1>Welcome to Online Book Store</h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <section class="add-book-form">
+            <h2>Add a Book to Sell</h2>
+            <input type="text" id="bookTitle" placeholder="Book Title">
+            <input type="text" id="author" placeholder="Author">
+            <input type="text" id="contact" placeholder="Contact Number (+91)" maxlength="13" oninput="validateContact()">
+            <input type="email" id="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+            <input type="number" id="price" placeholder="Price in Rupees">
+            <input type="file" id="imageFile" accept="image/*">
+            <button onclick="addBook()">Add Book</button>
+        </section>
+
+        <section class="book-list" id="bookList">
+            <!-- New book items will be added here -->
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
